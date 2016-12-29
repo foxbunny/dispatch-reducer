@@ -1,0 +1,22 @@
+.TodoInput {
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.TodoInput-input {
+  border: 0;
+  color: #778;
+  font-size: 20px;
+  padding: 1rem 2rem;
+  width: calc(100% - 6rem);
+}
+
+.TodoInput-button {
+  border: 0;
+  background: #dd88dd;
+  color: white;
+  height: 54.5px;
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+  width: 6rem;
+}

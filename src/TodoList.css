@@ -1,0 +1,15 @@
+.TodoList {
+  padding: 0;
+}
+
+.TodoList-item,
+.TodoList-checked {
+  font-size: 20px;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.TodoList-desc-completed {
+  text-decoration: line-through;
+  color: #aab;
+}

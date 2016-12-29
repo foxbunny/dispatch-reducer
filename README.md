@@ -16,6 +16,10 @@ The advantages of using this pattern are:
 - The code that changes the state lives close te actual components that initiate
   the state change.
 
+One disadvantage of using this pattern is that it violates the principle of
+least autority by surrendering the state to the code outside the reducers. There
+could be other unintended effects that the author has overlooked.
+
 ## Implementation notes
 
 Start by looking at the code in `src/TodoInput.js` and `src/TodoList.js`. This

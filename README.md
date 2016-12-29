@@ -13,7 +13,7 @@ dispatching reducers instead of pure data.
 The advantages of using this pattern are:
 
 - It is much simpler to set up: only one action and one reducer
-- The code that changes the state lives close te actual components that initiate
+- The code that changes the state lives close to the components that initiate
   the state change.
 
 One disadvantage of using this pattern is that it violates the principle of

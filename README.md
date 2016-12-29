@@ -5,16 +5,28 @@ architecture we call *dispatched reducers*.
 
 ## Overview
 
-In this pattern, the entire application state is handle by a single
+In a typical Redux application, reducers are in charge of modifying the
+applcation state. Reducers modify the state by handling actions, which are
+dispatched by the application code. While this approach has proven quite
+effective from the architectural standpoint, it introduces a lot of indirection
+and complex set-up.
+
+In this pattern, the entire application state is handled by a single
 reducer-action pair and the state change is not done in the reducer but in a
-function that is included in the action object's payload. We are therefore
-dispatching reducers instead of pure data.
+function that is included in the action object. We are essentially shuffling the
+Redux architecture by moving the code that would normally live in a reducer into
+the action payload.
 
-The advantages of using this pattern are:
+This solves two issues the author of this code saw with Redux:
 
-- It is much simpler to set up: only one action and one reducer
-- The code that changes the state lives close to the components that initiate
-  the state change.
+- complexity of set-up is reduced (pun intentional) by having a single
+  reducer-action pair
+- the code that changes the state now lives closer to the application code, thus
+  removing the indirection
+
+As an indirect result of using this pattern, the author believes we can move
+faster because we are able to write reducers without having to write matching
+actions and the boilerplate for matching against them.
 
 One disadvantage of using this pattern is that it violates the principle of
 least autority by surrendering the state to the code outside the reducers. There

@@ -1,7 +1,7 @@
 # dispatch-reducer
 
-This repository is a demonstration of an architecture based on Flow/Redux
-pattern we call dispatched reducer.
+This repository is a demonstration of a pattern based on Flow/Redux
+architecture we call *dispatched reducers*.
 
 ## Overview
 
